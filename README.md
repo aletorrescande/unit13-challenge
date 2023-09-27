@@ -8,3 +8,7 @@ It is done by completing the following tasks:
 
 ## Result
 You can download the video of the final output under the Recording Folder. The json_exports folder contains the json formats of the bot, intent and slots.
+
+### Libraries 
+datetime
+relativedelta from dateutil.relativedelta  
