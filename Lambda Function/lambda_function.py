@@ -31,7 +31,7 @@ def validate_data(age, investment_amount, intent_request):
     # Validate that the user is younger than 65
     if age is not None:
         age = parse_int(age)
-        if age > 64 and age < 0:
+        if age > 64 or age < 0:
             return build_validation_result(
                 False,
                     "age",
@@ -148,9 +148,9 @@ def recommend_portfolio(intent_request):
     initial_recommendation = ""
     if risk_level == "None":
         initial_recommendation ="100% bonds (AGG), 0% equities (SPY)"
-    elif risk_level == "Low":
+    elif risk_level == " Very Low":
         initial_recommendation ="80% bonds (AGG), 20% equities (SPY)"
-    elif risk_level == "Very Low":
+    elif risk_level == "Low":
         initial_recommendation ="60% bonds (AGG), 40% equities (SPY)"
     elif risk_level == "Medium":
         initial_recommendation ="40% bonds (AGG), 60% equities (SPY)"
